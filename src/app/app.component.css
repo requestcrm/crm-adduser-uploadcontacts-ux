@@ -1,3 +1,6 @@
+
+css for upload start
+
 #smallfont{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -42,8 +45,8 @@
 }
 
 .mainOuterBox{
-    padding-left: 15%;
-    padding-right: 8%;
+    padding-left: 18%;
+    padding-right: 12%;
 }
 
 #content1 {
@@ -85,34 +88,61 @@
     font-weight: bold;
 }
 
-.button {
-    background-color: yellow; 
-    color: black;
-    padding: 7px;
-    text-align: center;
-    font-size: 16px;
-    margin: 2px 2px;
-    border-radius: 14px;
+.btn-light {
     border-color: yellow;
-    box-shadow: none;
+    background-color: white;
 }
 
-.button1 {
-    background-color: white; 
-    color: black;
-    padding: 7px;
-    text-align: center;
-    font-size: 16px;
-    margin: 2px 2px;
-    border-radius: 14px;
-    border-color: yellow;
+.btn-light-yellow {
+    border-color: lightgrey;
+    background-color: white;
+}
+
+.btn-tab {
+    border-color: darkgrey;
+    box-shadow: 2px 0 1px -1px rgba(31, 73, 125, 0.8), -2px 0 1px -1px rgba(31, 73, 125, 0.8);
+    margin-right: 4px;
+    border-radius: 0px;
+    border-bottom: 0px;
+    border-style: solid;
 }
 
 .nextbutton {
     padding: 15%;
 }
-
 .col-8 {
     flex: 0 0 66.666667%;
     max-width: 65.666667%;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 104%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkgrey;
+    color: white;
+}
+
+.p1, .p2 {
+    display: inline;
+}
+
+#p11{
+    font-size: 15px;
+    font-weight: bold;
 }

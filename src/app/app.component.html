@@ -1,4 +1,4 @@
-<div class="outerBox1">
+<div id="First" class="outerBox1">
     <div class="logo">
         <img src="../assets/yell.png" width="100" height="50" />
     </div>
@@ -86,14 +86,322 @@
     </div>
     <br>
     <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-4 col-lg-3 text-center">
-                    <button class="button1" >Go Back</button>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3 text-center">
+                <button class="btn btn-light">&#x227A; Go Back</button>
+            </div>
+            <div class="col-8 text-right">
+                <button class="btn btn-warning" (click)="myFirst()">Proceed to Step 3 – Review and Confirm Data</button>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div id="Second" class="outerBox1">
+    <div class="logo">
+        <img src="../assets/yell.png" width="100" height="50" />
+    </div>
+
+    <hr style="border-top: 3px solid #fffb00fd;">
+
+    <div style="text-align:center">
+        <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
+        <div id="smallfont">
+            You are just 3 steps away from your first campaign
+        </div>
+        <div>
+            <img src="../assets/navbar1.png">
+        </div>
+    </div>
+    <hr>
+    <div class="mainOuterBox">
+        <div class="tabs">
+            <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked == null || tabClicked === 'Customer'" (click)="tabClicked = 'Customer'">Customer</button>
+            <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'Contacts'" (click)="tabClicked = 'Contacts'">Contacts</button>
+            <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'LeadData'" (click)="tabClicked = 'LeadData'">Lead Data</button>
+        </div>
+        <div class="outerBox">
+            <div id="content">
+                <div [hidden]="!(tabClicked === 'Customer')">
+                    <br>
+                    <p class="p1" id="p11">23 Customers imported.</p>
+                    <p class="p2">&nbsp;Please review and confirm your Customers</p>
+                    <br>
+                    <table id="customers">
+                        <tr>
+                            <th>Account</th>
+                            <th>Account Address</th>
+                            <th>Zip Code</th>
+                            <th>Account Telephone</th>
+                            <th>Account Email</th>
+                        </tr>
+                        <tr>
+                            <td>Anytime Air Support Inc</td>
+                            <td>Kidlington</td>
+                            <td>OX5 2FN</td>
+                            <td>(335) 264-8565</td>
+                            <td>anytimeair@example.com</td>
+
+                        </tr>
+                        <tr>
+                            <td>Anytime Air Support Inc</td>
+                            <td>Kidlington</td>
+                            <td>OX5 2FN</td>
+                            <td>(335) 264-8565</td>
+                            <td>anytimeair@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Anytime Air Support Inc</td>
+                            <td>Kidlington</td>
+                            <td>OX5 2FN</td>
+                            <td>(335) 264-8565</td>
+                            <td>anytimeair@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>PAtoZ Co Ltd</td>
+                            <td>London</td>
+                            <td>LN1 3HJ</td>
+                            <td>(331) 264-8245</td>
+                            <td>a2z@example.com</td>
+                        </tr>
+                    </table>
+                    <br>
                 </div>
-                <div class="col-8 text-right">
-                    <button class="button" >Proceed to Step 3 – Review and Confirm Data</button>
+                <div [hidden]="!(tabClicked === 'Contacts')">
+                    <br>
+                    <p class="p1" id="p11">300 Contacts imported.</p>
+                    <p class="p2">&nbsp;Please review and confirm your Contacts</p>
+                    <br>
+                    <table id="customers">
+                        <tr>
+                            <th>Contact First Name</th>
+                            <th>Contact First Name</th>
+                            <th>Email Address</th>
+                            <th>Telephone</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>IT Developer</th>
+                        </tr>
+                        <tr>
+                            <td>samplecontact1</td>
+                            <td>test1</td>
+                            <td>sample1@test1.com</td>
+                            <td>23423462343</td>
+                            <td>31</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+
+                        </tr>
+                        <tr>
+                            <td>samplecontact2</td>
+                            <td>test2</td>
+                            <td>sample2@test2.com</td>
+                            <td>34523423423</td>
+                            <td>35</td>
+                            <td>Male</td>
+                            <td>Director Operations</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact3</td>
+                            <td>test3</td>
+                            <td>sample3@test3.com</td>
+                            <td>23423432447</td>
+                            <td>30</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact4</td>
+                            <td>test4</td>
+                            <td>sample4@test4.com</td>
+                            <td>23432432423</td>
+                            <td>27</td>
+                            <td>Male</td>
+                            <td>Mgr Operations</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact5</td>
+                            <td>test5</td>
+                            <td>sample5@test5.com</td>
+                            <td>34543536223</td>
+                            <td>38</td>
+                            <td>Male</td>
+                            <td>President</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact6</td>
+                            <td>test6</td>
+                            <td>sample6@test6.com</td>
+                            <td>34523443412</td>
+                            <td>29</td>
+                            <td>Male</td>
+                            <td>Director Operations</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact7</td>
+                            <td>test7</td>
+                            <td>sample7@test7.com</td>
+                            <td>34543134634</td>
+                            <td>35</td>
+                            <td>Male</td>
+                            <td>Director Operations</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact8</td>
+                            <td>test8</td>
+                            <td>sample8@test8.com</td>
+                            <td>45654523424</td>
+                            <td>31</td>
+                            <td>Male</td>
+                            <td>Director Operations</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact9</td>
+                            <td>test9</td>
+                            <td>sample9@test9.com</td>
+                            <td>45635234211</td>
+                            <td>34</td>
+                            <td>Male</td>
+                            <td>Mgr Operations</td>
+                        </tr>
+                        <tr>
+                            <td>samplecontact10</td>
+                            <td>test10</td>
+                            <td>sample10@test10.com</td>
+                            <td>78857566544</td>
+                            <td>36</td>
+                            <td>Male</td>
+                            <td>Mgr Operations</td>
+                        </tr>
+                    </table>
+                    <br>
+                </div>
+                <div [hidden]="!(tabClicked === 'LeadData')">
+                    <br>
+                    <p class="p1" id="p11">210 Leads imported.</p>
+                    <p class="p2">&nbsp;Please review and confirm your Lead Data</p>
+                    <br>
+                    <table id="customers">
+                        <tr>
+                            <th>Account Name</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email Address</th>
+                            <th>Telephone</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Role</th>
+                        </tr>
+                        <tr>
+                            <td>Anytime Air Support Inc</td>
+                            <td>samplecontact1</td>
+                            <td>test1</td>
+                            <td>sample1@test1.com</td>
+                            <td>8798656746</td>
+                            <td>26</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+
+                        </tr>
+                        <tr>
+                            <td>Anytime Air Support Inc</td>
+                            <td>samplecontact2</td>
+                            <td>test2</td>
+                            <td>sample2@test2.com</td>
+                            <td>67854234232</td>
+                            <td>28</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+                        </tr>
+                        <tr>
+                            <td>Anytime Air Support Inc</td>
+                            <td>samplecontact3</td>
+                            <td>test3</td>
+                            <td>sample3@test3.com</td>
+                            <td>56354355552</td>
+                            <td>38</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>samplecontact4</td>
+                            <td>test4</td>
+                            <td>sample4@test4.com</td>
+                            <td>45655424323</td>
+                            <td>25</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+                        </tr>
+                        <tr>
+                            <td>AtoZ Co Ltd</td>
+                            <td>samplecontact5</td>
+                            <td>test5</td>
+                            <td>sample5@test5.com</td>
+                            <td>6345453242</td>
+                            <td>31</td>
+                            <td>Male</td>
+                            <td>Director Sales</td>
+                        </tr>
+                    </table>
+                    <br>
                 </div>
             </div>
         </div>
-        <br>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-3 text-center">
+                <button class="btn btn-light" (click)="mySecond()">&#x227A; Go Back</button>
+            </div>
+            <div class="col-8 text-right">
+                <button class="btn btn-warning">Proceed to Step 3 – Review and Confirm Data</button>
+            </div>
+        </div>
+    </div>
+    <br>
 </div>

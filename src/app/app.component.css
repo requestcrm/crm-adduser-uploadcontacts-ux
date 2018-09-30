@@ -1,17 +1,81 @@
-
-css for upload start
-
 #smallfont{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
- }
- 
- #details{
+}
+
+#details{
+    padding-left:1%;
+    width:100%;
+    border: 0.1px lightgray solid;
+    box-shadow: 1px 1px 1px 0px #888888;
+    color: grey;
+}
+
+#card2{
+    border-style: groove;
+    border-width: 2px;
     font-family: Arial, Helvetica, sans-serif;
     color: #85857cfd;
- }
+    width: 80%;
+    height: 80%;
+}
 
- #smallFont{
+#text1{
+    font-size: 20px;
+}
+
+.column1{
+    width:50%;
+    box-sizing: border-box;
+}
+
+.column2{
+    width:50%;
+    box-sizing: border-box;
+}
+
+.btn-light{
+    background-color: white; 
+    border-color: yellow;
+}
+
+
+.sticky {
+    text-align:center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    font-size: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #999; 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+
+
+
+css for upload start
+#smallFont{
     font-family: Arial;
     color: #85857cfd;
     font-size: 13px;
@@ -40,13 +104,20 @@ css for upload start
 }
 
 .outerBox1 {
+    padding-left:1%;
+    width:100%;
+    border: 0.1px lightgray solid;
+    box-shadow: 1px 1px 1px 0px #888888;
+}
+
+.outerBox1 {
     width:100%;
     border: 0.1px lightgray solid;
 }
 
 .mainOuterBox{
-    padding-left: 18%;
-    padding-right: 12%;
+    padding-left: 15%;
+    padding-right: 8%;
 }
 
 #content1 {
@@ -142,7 +213,22 @@ css for upload start
     display: inline;
 }
 
+.opt-text, .opt-img {
+    display: inline;
+}
+
 #p11{
     font-size: 15px;
     font-weight: bold;
+}
+
+.hide-scroll-bar {
+    overflow: hidden;
+  }
+
+.col-logo {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-right: 72px;
 }

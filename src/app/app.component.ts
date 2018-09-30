@@ -75,9 +75,34 @@ export class AppComponent {
     x.style.display = "block";
   }
   ngOnInit() {
+
+    var updateProfile = document.getElementById("update-prodfile");
+    updateProfile.style.display = "block";
+
+    var uploadUsers = document.getElementById("upload-users");
+    uploadUsers.style.display = "none";
+
     var y = document.getElementById("Second");
     y.style.display = "none";
+
     this.tabClicked = 'Customer';
+
+  }
+
+  enableUploadUsers() {
+    var updateProfile = document.getElementById("update-prodfile");
+    updateProfile.style.display = "none";
+
+    var uploadUsers = document.getElementById("upload-users");
+    uploadUsers.style.display = "block";
+  }
+
+  enableUploadProfile() {
+    var updateProfile = document.getElementById("update-prodfile");
+    updateProfile.style.display = "block";
+
+    var uploadUsers = document.getElementById("upload-users");
+    uploadUsers.style.display = "none";
   }
 
 }

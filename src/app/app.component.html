@@ -1,407 +1,676 @@
-<div id="First" class="outerBox1">
-    <div class="logo">
-        <img src="../assets/yell.png" width="100" height="50" />
-    </div>
-
-    <hr style="border-top: 3px solid #fffb00fd;">
-
-    <div style="text-align:center">
+<div id="update-prodfile">
+    <div class="sticky">
+        <div class="logo">
+            <img src="../assets/yell.png" width="100" height="50" />
+        </div>
+        <hr style="border-top: 3px solid #ffee03fd;">
         <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
         <div id="smallfont">
-            You are just 3 steps away from your first campaign
+            You are just four steps away from your first campaign
         </div>
-        <div>
-            <img src="../assets/navbar.png">
+        <div style="align-content: center">
+            <img src="assets/img/firstpage.PNG" />
         </div>
+        <hr style="border-top: 1px solid #e4e4defd;">
     </div>
-    <hr>
-    <div class="mainOuterBox">
-        <div class="outerBox">
-            <div id="content">
+    <div style="overflow-y:scroll; height:350px;">
+        <div style="padding: 0% 15%">
+            <div class="outerBox1">
                 <br>
-                <p id="details">Import Customer, Contacts and Lead Data</p>
+                <p style="color: gray; font-size: 17px">Enter Company Profile Information</p>
                 <div class="row">
                     <div class="col">
-                        <div id="content1" class="row"></div>
-                        <div id="content1" class="row">
-                            <div id="details">
-                                <img src="../assets/one.png">
+                        <table>
+                            <div style="font-size: 15px; padding-right: 40px; color: grey;">
+                                <tr>
+                                    <td style="padding-right:40px;">Company Name</td>
+                                    <td>
+                                        <input type="text" name="companyname" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td style="padding-right:40px;">ZIP Code</td>
+                                    <td>
+                                        <input type="text" name="zip" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td style="padding-right:40px;">Address</td>
+                                    <td>
+                                        <input type="text" name="address" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td style="padding-right:40px;">Phone Number</td>
+                                    <td>
+                                        <input type="text" name="mobile" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
                             </div>
-                            <div class="col">
-                                <p id="firstRowWithPadding">Download the CSV format to fill up your customer data</p>
-                            </div>
-                            <div>
-                                <a href="../assets/SampleContacts.csv" download="SampleContacts.csv" title="Download CSV">
-                                    <img alt="Download CSV" src="../assets/excel.png">
-                                </a>
+                        </table>
+                    </div>
+                    <div class="col-logo">
+                        <table style="padding-right: 2px">
+                            <tr>
+                                <td>
+                                        <img src="../assets/text.png"/>
+                                </td>
+                                <td><img src="assets/img/UploadLogo.PNG" style="padding-left:6px;" /></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td style="padding-left:115px; color: grey">or</td>
+                                </tr>
+                            <tr>
+                                <td></td>
+                                <td style="padding-left:39px;">
+                                        <input class="btn btn-light" type="button" value="Choose File" style="padding-left:50px;padding-right:50px; color: grey;">
+                                </td>
+                            </tr>    
+                            
+                        </table>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="padding:0% 15%">
+            <div id="details">
+                <div id="text1">
+                    Add the users you want to access your CRM
+                </div>
+                (Once we complete the four steps, we will send your users an email with instructions to set up their account)
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <table>
+                                <div style="font-size: 17px; padding: 20px;">
+                                    <tr>
+                                        <td style="padding-right:48px;">First Name</td>
+                                        <td>
+                                            <input type="text" name="firstname" style="border-style: groove;">
+                                        </td>
+                                    </tr>
+                                    <br>
+                                    <tr>
+                                        <td style="padding-right:48px;">Last Name</td>
+                                        <td>
+                                            <input type="text" name="lastname" style="border-style: groove;">
+                                        </td>
+                                    </tr>
+                                    <br>
+                                    <tr>
+                                        <td style="padding-right:48px;"> Email Address</td>
+                                        <td>
+                                            <input type="text" name="email" style="border-style: groove;">
+                                        </td>
+                                    </tr>
+
+                                </div>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div style="padding:20px;">
+                                <input class="regular-checkbox" type="checkbox" name="admin" value="admin">
+                                <output style="padding-left:20px;">Make an Administrator</output>
+                                <img src="assets/img/tooltip.PNG" style="padding-right:18px;" />
+                                <input type="button" value="Add User" class="btn btn-light" style="padding-left: 40px; padding-right: 40px; color: grey">
                             </div>
                         </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <img src="../assets/two.png">
-                            </div>
-                            <div class="col-sm-10">
-                                <div class="divBorder">
-                                    <div align="center" class="image-upload">
-                                        <label for="file-input">
-                                            <img src="../assets/excelupload.png" style="pointer-events: none" />
-                                        </label>
-                                        <input type="file" id="file-input" class="upload" (change)="convertFile($event)" accept="csv">
+                    </div>
+                    <br>
+                    <div class="col">
+                        Users Added
+                        <div id="card2">
+                            <div>
+                                <div class="row">
+                                    <div class="col-1">
+                                        <img src="assets/img/user.PNG" />
                                     </div>
-                                    <div>
-                                        <p id="smallFont">Drag and drop or click here to upload the filled-up file</p>
+                                    <div class="col-6">
+                                        <output style="font-size: 14px">Alan Walker(admin)</output>
+                                    </div>
+                                    <div class="col-2">
+                                        <a href="">
+                                            <u style="color: rgb(235, 235, 72);font-size: 14px">Edit</u>
+                                        </a>
+                                    </div>
+                                    <div class="col-1">
+                                        <a href="">
+                                            <u style="color: rgb(235, 223, 72);font-size: 14px">Delete</u>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <div style="padding-left: 35%">
-                            <img src="../assets/or.png">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="row">
-                            <p id="smallFont1">If Alan Tire Company has a Facebook, Instagram or a LinkedIn page, please select from the below
-                                options and grant us access. We will automatically sync this data with your CRM.
-                            </p>
-                        </div>
-                        <div class="row">
-                            <img src="../assets/fb.png">
-                        </div>
-                        <div class="row">
-                            <p id="smallFont1">If you want to import contacts from a specific email account, please select from the below options
-                                to sync your contacts.
-                            </p>
-                        </div>
-                        <div class="row">
-                            <img src="../assets/gmail.png">
-                        </div>
-                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div style="padding:0% 15%">
+            <div id="details">
+                <div id="text1">
+                    Please provide us the business email account to be used for sending emails and running campaigns.
+                </div>
+                (Manage your customer interactions directly from the CRM)
+                <br>
+                <br>
+                <div style="color: grey">
+                    Please choose one Email Service Provider and we will fill the server details for you.
                 </div>
                 <br>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="row">
+                            <table>
+                                <div style="padding-left: 12px;">
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/gmailselected.PNG" height="75px" width="75px" />
+                                        </td>
+                                        <td>
+                                            <img src="assets/img/yahoo.PNG" height="75px" width="75px" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="assets/img/outlook.PNG" height="75px" width="75px" />
+                                        </td>
+                                        <td>
+                                            <img src="assets/img/othermail.PNG" height="75px" width="75px" />
+                                        </td>
+                                    </tr>
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-5">
+                        <div style="padding-left:20px;">
+                            Mail Server
+                            <img src="assets/img/tooltip.PNG" style="padding-right: 20px;" />
+                            <input type="text" name="mailserver" style="border-style: groove;background: rgb(241, 241, 241);">
+                            <br>
+                            <br> Port
+                            <img src="assets/img/tooltip.PNG" style="padding-right: 70px;" />
+                            <input type="text" name="port" style="border-style: groove;background: rgb(241, 241, 241);">
+                            <br>
+                            <br> SSL or TLS
+                            <img src="assets/img/tooltip.PNG" style="padding-right: 27px;" />
+                            <select style="padding-right: 125px; height: 30px; color: #85857cfd;background: rgb(241, 241, 241);">
+                                <option style="border-style: groove;" value="SSL">SSL</option>
+                                <option style="border-style: groove;" value="TLS">TLS</option>
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <table>
+                            <div style="font-size: 17px;">
+                                <tr>
+                                    <td>"From" Name</td>
+                                    <td>
+                                        <img src="assets/img/tooltip.PNG" />
+                                    </td>
+                                    <td>
+                                        <input type="text" name="fromname" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td>"From" Email</td>
+                                    <td>
+                                        <img src="assets/img/tooltip.PNG" />
+                                    </td>
+                                    <td>
+                                        <input type="text" name="fromemail" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td>Password
+                                        <img src="assets/img/tooltip.PNG" />
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <input type="password" name="password" style="border-style: groove;">
+                                    </td>
+                                </tr>
+                                <br>
+                            </div>
+                        </table>
+                        <input type="button" value="Integrate Email Account and Test Email" class="btn btn-light" style="padding-left: 25px; padding-right: 25px; color: #85857cfd;">
+                        <img src="assets/img/tooltip.PNG" />
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-3 text-center">
-                <button class="btn btn-light">&#x227A; Go Back</button>
-            </div>
-            <div class="col-8 text-right">
-                <button class="btn btn-warning" (click)="myFirst()">Proceed to Step 3 – Review and Confirm Data</button>
-            </div>
+        <br>
+        <div style="text-align: right;padding-right: 200px;">
+            <input type="button" value="Proceed to Step 2 - Import Data" class="btn btn-warning" style="padding-left: 25px; padding-right: 25px;"
+                (click)="enableUploadUsers()">
         </div>
+        <br>
     </div>
-    <br>
 </div>
 
-<div id="Second" class="outerBox1">
-    <div class="logo">
-        <img src="../assets/yell.png" width="100" height="50" />
-    </div>
-
-    <hr style="border-top: 3px solid #fffb00fd;">
-
-    <div style="text-align:center">
-        <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
-        <div id="smallfont">
-            You are just 3 steps away from your first campaign
+<div id="upload-users" style="overflow-y:scroll; height:620px;">
+    <div id="First" class="outerBox1">
+        <div class="logo">
+            <img src="../assets/yell.png" width="100" height="50" />
         </div>
-        <div>
-            <img src="../assets/navbar1.png">
+
+        <hr style="border-top: 3px solid #fffb00fd;">
+
+        <div style="text-align:center">
+            <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
+            <div id="smallfont">
+                You are just 3 steps away from your first campaign
+            </div>
+            <div>
+                <img src="../assets/navbar.png">
+            </div>
         </div>
-    </div>
-    <hr>
-    <div class="mainOuterBox">
-        <div class="tabs">
-            <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked == null || tabClicked === 'Customer'" (click)="tabClicked = 'Customer'">Customer</button>
-            <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'Contacts'" (click)="tabClicked = 'Contacts'">Contacts</button>
-            <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'LeadData'" (click)="tabClicked = 'LeadData'">Lead Data</button>
-        </div>
-        <div class="outerBox">
-            <div id="content">
-                <div [hidden]="!(tabClicked === 'Customer')">
+        <hr>
+        <div class="mainOuterBox">
+            <div class="outerBox">
+                <div id="content">
                     <br>
-                    <p class="p1" id="p11">23 Customers imported.</p>
-                    <p class="p2">&nbsp;Please review and confirm your Customers</p>
-                    <br>
-                    <table id="customers">
-                        <tr>
-                            <th>Account</th>
-                            <th>Account Address</th>
-                            <th>Zip Code</th>
-                            <th>Account Telephone</th>
-                            <th>Account Email</th>
-                        </tr>
-                        <tr>
-                            <td>Anytime Air Support Inc</td>
-                            <td>Kidlington</td>
-                            <td>OX5 2FN</td>
-                            <td>(335) 264-8565</td>
-                            <td>anytimeair@example.com</td>
-
-                        </tr>
-                        <tr>
-                            <td>Anytime Air Support Inc</td>
-                            <td>Kidlington</td>
-                            <td>OX5 2FN</td>
-                            <td>(335) 264-8565</td>
-                            <td>anytimeair@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>Anytime Air Support Inc</td>
-                            <td>Kidlington</td>
-                            <td>OX5 2FN</td>
-                            <td>(335) 264-8565</td>
-                            <td>anytimeair@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>PAtoZ Co Ltd</td>
-                            <td>London</td>
-                            <td>LN1 3HJ</td>
-                            <td>(331) 264-8245</td>
-                            <td>a2z@example.com</td>
-                        </tr>
-                    </table>
-                    <br>
-                </div>
-                <div [hidden]="!(tabClicked === 'Contacts')">
-                    <br>
-                    <p class="p1" id="p11">300 Contacts imported.</p>
-                    <p class="p2">&nbsp;Please review and confirm your Contacts</p>
-                    <br>
-                    <table id="customers">
-                        <tr>
-                            <th>Contact First Name</th>
-                            <th>Contact First Name</th>
-                            <th>Email Address</th>
-                            <th>Telephone</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>IT Developer</th>
-                        </tr>
-                        <tr>
-                            <td>samplecontact1</td>
-                            <td>test1</td>
-                            <td>sample1@test1.com</td>
-                            <td>23423462343</td>
-                            <td>31</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-
-                        </tr>
-                        <tr>
-                            <td>samplecontact2</td>
-                            <td>test2</td>
-                            <td>sample2@test2.com</td>
-                            <td>34523423423</td>
-                            <td>35</td>
-                            <td>Male</td>
-                            <td>Director Operations</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact3</td>
-                            <td>test3</td>
-                            <td>sample3@test3.com</td>
-                            <td>23423432447</td>
-                            <td>30</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact4</td>
-                            <td>test4</td>
-                            <td>sample4@test4.com</td>
-                            <td>23432432423</td>
-                            <td>27</td>
-                            <td>Male</td>
-                            <td>Mgr Operations</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact5</td>
-                            <td>test5</td>
-                            <td>sample5@test5.com</td>
-                            <td>34543536223</td>
-                            <td>38</td>
-                            <td>Male</td>
-                            <td>President</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact6</td>
-                            <td>test6</td>
-                            <td>sample6@test6.com</td>
-                            <td>34523443412</td>
-                            <td>29</td>
-                            <td>Male</td>
-                            <td>Director Operations</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact7</td>
-                            <td>test7</td>
-                            <td>sample7@test7.com</td>
-                            <td>34543134634</td>
-                            <td>35</td>
-                            <td>Male</td>
-                            <td>Director Operations</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact8</td>
-                            <td>test8</td>
-                            <td>sample8@test8.com</td>
-                            <td>45654523424</td>
-                            <td>31</td>
-                            <td>Male</td>
-                            <td>Director Operations</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact9</td>
-                            <td>test9</td>
-                            <td>sample9@test9.com</td>
-                            <td>45635234211</td>
-                            <td>34</td>
-                            <td>Male</td>
-                            <td>Mgr Operations</td>
-                        </tr>
-                        <tr>
-                            <td>samplecontact10</td>
-                            <td>test10</td>
-                            <td>sample10@test10.com</td>
-                            <td>78857566544</td>
-                            <td>36</td>
-                            <td>Male</td>
-                            <td>Mgr Operations</td>
-                        </tr>
-                    </table>
-                    <br>
-                </div>
-                <div [hidden]="!(tabClicked === 'LeadData')">
-                    <br>
-                    <p class="p1" id="p11">210 Leads imported.</p>
-                    <p class="p2">&nbsp;Please review and confirm your Lead Data</p>
-                    <br>
-                    <table id="customers">
-                        <tr>
-                            <th>Account Name</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email Address</th>
-                            <th>Telephone</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Role</th>
-                        </tr>
-                        <tr>
-                            <td>Anytime Air Support Inc</td>
-                            <td>samplecontact1</td>
-                            <td>test1</td>
-                            <td>sample1@test1.com</td>
-                            <td>8798656746</td>
-                            <td>26</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-
-                        </tr>
-                        <tr>
-                            <td>Anytime Air Support Inc</td>
-                            <td>samplecontact2</td>
-                            <td>test2</td>
-                            <td>sample2@test2.com</td>
-                            <td>67854234232</td>
-                            <td>28</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-                        </tr>
-                        <tr>
-                            <td>Anytime Air Support Inc</td>
-                            <td>samplecontact3</td>
-                            <td>test3</td>
-                            <td>sample3@test3.com</td>
-                            <td>56354355552</td>
-                            <td>38</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>samplecontact4</td>
-                            <td>test4</td>
-                            <td>sample4@test4.com</td>
-                            <td>45655424323</td>
-                            <td>25</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-                        </tr>
-                        <tr>
-                            <td>AtoZ Co Ltd</td>
-                            <td>samplecontact5</td>
-                            <td>test5</td>
-                            <td>sample5@test5.com</td>
-                            <td>6345453242</td>
-                            <td>31</td>
-                            <td>Male</td>
-                            <td>Director Sales</td>
-                        </tr>
-                    </table>
+                    <p style="color: gray;">Import Customer, Contacts and Lead Data</p>
+                    <div class="row">
+                        <div class="col">
+                            <div id="content1" class="row"></div>
+                            <div id="content1" class="row">
+                                <div id="details1">
+                                    <img src="../assets/one.png">
+                                </div>
+                                <div class="col">
+                                    <p id="firstRowWithPadding">Download the CSV format to fill up your customer data</p>
+                                </div>
+                                <div>
+                                    <a href="../assets/SampleContacts.csv" download="SampleContacts.csv" title="Download CSV">
+                                        <img alt="Download CSV" src="../assets/excel.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img src="../assets/two.png">
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="divBorder">
+                                        <div align="center" class="image-upload">
+                                            <label for="file-input">
+                                                <img src="../assets/excelupload.png" style="pointer-events: none" />
+                                            </label>
+                                            <input type="file" id="file-input" class="upload" (change)="convertFile($event)" accept="csv">
+                                        </div>
+                                        <div>
+                                            <p id="smallFont">Drag and drop or click here to upload the filled-up file</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div style="padding-left: 35%">
+                                <img src="../assets/or.png">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <p id="smallFont1">If Alan Tire Company has a Facebook, Instagram or a LinkedIn page, please select from the
+                                    below options and grant us access. We will automatically sync this data with your CRM.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <img src="../assets/fb.png">
+                            </div>
+                            <div class="row">
+                                <p id="smallFont1">If you want to import contacts from a specific email account, please select from the below
+                                    options to sync your contacts.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <img src="../assets/gmail.png">
+                            </div>
+                        </div>
+                    </div>
                     <br>
                 </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-3 text-center">
-                <button class="btn btn-light" (click)="mySecond()">&#x227A; Go Back</button>
-            </div>
-            <div class="col-8 text-right">
-                <button class="btn btn-warning">Proceed to Step 3 – Review and Confirm Data</button>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-3 text-center">
+                    <button class="btn btn-light" (click)="enableUploadProfile()">&#x227A; Go Back</button>
+                </div>
+                <div class="col-8 text-right">
+                    <button class="btn btn-warning" (click)="myFirst()">Proceed to Step 3 – Review and Confirm Data</button>
+                </div>
             </div>
         </div>
+        <br>
     </div>
-    <br>
+
+    <div id="Second" class="outerBox1">
+        <div class="logo">
+            <img src="../assets/yell.png" width="100" height="50" />
+        </div>
+
+        <hr style="border-top: 3px solid #fffb00fd;">
+
+        <div style="text-align:center">
+            <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
+            <div id="smallfont">
+                You are just 3 steps away from your first campaign
+            </div>
+            <div>
+                <img src="../assets/navbar1.png">
+            </div>
+        </div>
+        <hr>
+        <div class="mainOuterBox">
+            <div class="tabs">
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked == null || tabClicked === 'Customer'" (click)="tabClicked = 'Customer'">Customer</button>
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'Contacts'" (click)="tabClicked = 'Contacts'">Contacts</button>
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'LeadData'" (click)="tabClicked = 'LeadData'">Lead Data</button>
+            </div>
+            <div class="outerBox">
+                <div id="content">
+                    <div [hidden]="!(tabClicked === 'Customer')">
+                        <br>
+                        <p class="p1" id="p11">23 Customers imported.</p>
+                        <p class="p2">&nbsp;Please review and confirm your Customers</p>
+                        <br>
+                        <table id="customers">
+                            <tr>
+                                <th>Account</th>
+                                <th>Account Address</th>
+                                <th>Zip Code</th>
+                                <th>Account Telephone</th>
+                                <th>Account Email</th>
+                            </tr>
+                            <tr>
+                                <td>Anytime Air Support Inc</td>
+                                <td>Kidlington</td>
+                                <td>OX5 2FN</td>
+                                <td>(335) 264-8565</td>
+                                <td>anytimeair@example.com</td>
+
+                            </tr>
+                            <tr>
+                                <td>Anytime Air Support Inc</td>
+                                <td>Kidlington</td>
+                                <td>OX5 2FN</td>
+                                <td>(335) 264-8565</td>
+                                <td>anytimeair@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>Anytime Air Support Inc</td>
+                                <td>Kidlington</td>
+                                <td>OX5 2FN</td>
+                                <td>(335) 264-8565</td>
+                                <td>anytimeair@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                            <tr>
+                                <td>PAtoZ Co Ltd</td>
+                                <td>London</td>
+                                <td>LN1 3HJ</td>
+                                <td>(331) 264-8245</td>
+                                <td>a2z@example.com</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+                    <div [hidden]="!(tabClicked === 'Contacts')">
+                        <br>
+                        <p class="p1" id="p11">300 Contacts imported.</p>
+                        <p class="p2">&nbsp;Please review and confirm your Contacts</p>
+                        <br>
+                        <table id="customers">
+                            <tr>
+                                <th>Contact First Name</th>
+                                <th>Contact First Name</th>
+                                <th>Email Address</th>
+                                <th>Telephone</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>IT Developer</th>
+                            </tr>
+                            <tr>
+                                <td>samplecontact1</td>
+                                <td>test1</td>
+                                <td>sample1@test1.com</td>
+                                <td>23423462343</td>
+                                <td>31</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+
+                            </tr>
+                            <tr>
+                                <td>samplecontact2</td>
+                                <td>test2</td>
+                                <td>sample2@test2.com</td>
+                                <td>34523423423</td>
+                                <td>35</td>
+                                <td>Male</td>
+                                <td>Director Operations</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact3</td>
+                                <td>test3</td>
+                                <td>sample3@test3.com</td>
+                                <td>23423432447</td>
+                                <td>30</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact4</td>
+                                <td>test4</td>
+                                <td>sample4@test4.com</td>
+                                <td>23432432423</td>
+                                <td>27</td>
+                                <td>Male</td>
+                                <td>Mgr Operations</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact5</td>
+                                <td>test5</td>
+                                <td>sample5@test5.com</td>
+                                <td>34543536223</td>
+                                <td>38</td>
+                                <td>Male</td>
+                                <td>President</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact6</td>
+                                <td>test6</td>
+                                <td>sample6@test6.com</td>
+                                <td>34523443412</td>
+                                <td>29</td>
+                                <td>Male</td>
+                                <td>Director Operations</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact7</td>
+                                <td>test7</td>
+                                <td>sample7@test7.com</td>
+                                <td>34543134634</td>
+                                <td>35</td>
+                                <td>Male</td>
+                                <td>Director Operations</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact8</td>
+                                <td>test8</td>
+                                <td>sample8@test8.com</td>
+                                <td>45654523424</td>
+                                <td>31</td>
+                                <td>Male</td>
+                                <td>Director Operations</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact9</td>
+                                <td>test9</td>
+                                <td>sample9@test9.com</td>
+                                <td>45635234211</td>
+                                <td>34</td>
+                                <td>Male</td>
+                                <td>Mgr Operations</td>
+                            </tr>
+                            <tr>
+                                <td>samplecontact10</td>
+                                <td>test10</td>
+                                <td>sample10@test10.com</td>
+                                <td>78857566544</td>
+                                <td>36</td>
+                                <td>Male</td>
+                                <td>Mgr Operations</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+                    <div [hidden]="!(tabClicked === 'LeadData')">
+                        <br>
+                        <p class="p1" id="p11">210 Leads imported.</p>
+                        <p class="p2">&nbsp;Please review and confirm your Lead Data</p>
+                        <br>
+                        <table id="customers">
+                            <tr>
+                                <th>Account Name</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email Address</th>
+                                <th>Telephone</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Role</th>
+                            </tr>
+                            <tr>
+                                <td>Anytime Air Support Inc</td>
+                                <td>samplecontact1</td>
+                                <td>test1</td>
+                                <td>sample1@test1.com</td>
+                                <td>8798656746</td>
+                                <td>26</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+
+                            </tr>
+                            <tr>
+                                <td>Anytime Air Support Inc</td>
+                                <td>samplecontact2</td>
+                                <td>test2</td>
+                                <td>sample2@test2.com</td>
+                                <td>67854234232</td>
+                                <td>28</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+                            </tr>
+                            <tr>
+                                <td>Anytime Air Support Inc</td>
+                                <td>samplecontact3</td>
+                                <td>test3</td>
+                                <td>sample3@test3.com</td>
+                                <td>56354355552</td>
+                                <td>38</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>samplecontact4</td>
+                                <td>test4</td>
+                                <td>sample4@test4.com</td>
+                                <td>45655424323</td>
+                                <td>25</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+                            </tr>
+                            <tr>
+                                <td>AtoZ Co Ltd</td>
+                                <td>samplecontact5</td>
+                                <td>test5</td>
+                                <td>sample5@test5.com</td>
+                                <td>6345453242</td>
+                                <td>31</td>
+                                <td>Male</td>
+                                <td>Director Sales</td>
+                            </tr>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-3 text-center">
+                    <button class="btn btn-light" (click)="mySecond()">&#x227A; Go Back</button>
+                </div>
+                <div class="col-8 text-right">
+                    <button class="btn btn-warning">Proceed to Step 3 – Review and Confirm Data</button>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
 </div>

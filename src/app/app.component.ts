@@ -64,6 +64,9 @@ export class AppComponent {
 }
 
   myFirst() {
+
+    this.getContacts().subscribe((data: any) => console.log("contacts :",this.contactList = data));
+
     var x = document.getElementById("First");
     x.style.display = "none";
     var y = document.getElementById("Second");
@@ -91,8 +94,6 @@ export class AppComponent {
   }
 
   enableUploadUsers() {
-
-    this.getContacts().subscribe((data: any) => console.log("contacts :",this.contactList = data));
 
     var updateProfile = document.getElementById("update-prodfile");
     updateProfile.style.display = "none";

@@ -16,6 +16,8 @@ import { Injectable } from "@angular/core";
 export class AppComponent {
   tabClicked: string;
   contactList: Observable<Array<any>>;
+  disable: Boolean;
+
   constructor(private http: Http) { }
   public convertFile(event: any) {
     let file: File = event.target.files[0];
@@ -46,6 +48,8 @@ export class AppComponent {
       result.push(obj);
     }
     this.postUsersData("{\"ContactList\" :" + JSON.stringify(result) + "}");
+    this.enableProceedButton();
+    this.enableSuccessExcelUpload();
   }
 
   private postUsersData(body: String) {
@@ -54,6 +58,15 @@ export class AppComponent {
     const headers = new Headers({ "Content-Type": "application/json" });
     const options = new RequestOptions({ headers });
     return this.http.post(url, body, options).subscribe();
+  }
+
+  enableProceedButton() {
+    (<HTMLInputElement> document.getElementById("proceed1")).disabled = false;
+  }
+
+  enableSuccessExcelUpload() {
+    (<HTMLInputElement> document.getElementById("excel-div")).style.display = "none";
+    (<HTMLInputElement> document.getElementById("success-excel-div")).style.display = "block";
   }
 
   getContacts(): Observable<any> {
@@ -90,6 +103,10 @@ export class AppComponent {
     y.style.display = "none";
 
     this.tabClicked = 'Customer';
+
+    (<HTMLInputElement> document.getElementById("proceed1")).disabled = true;
+
+    (<HTMLInputElement> document.getElementById("success-excel-div")).style.display = "none";
 
   }
 

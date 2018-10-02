@@ -1,7 +1,7 @@
 <div id="update-prodfile">
     <div class="sticky">
         <div class="logo">
-            <img src="../assets/yell.png" width="100" height="50" />
+            <img src="../assets/img/yell.png" />
         </div>
         <hr style="border-top: 3px solid #ffee03fd;">
         <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
@@ -15,67 +15,69 @@
     </div>
     <div style="overflow-y:scroll; height:350px;">
         <div style="padding: 0% 15%">
-            <div class="outerBox1">
+            <div id="details">
+                <div id="text1">
+                    Enter Company Profile Information
+                </div>
                 <br>
-                <p style="color: gray; font-size: 17px">Enter Company Profile Information</p>
                 <div class="row">
                     <div class="col">
                         <table>
-                            <div style="font-size: 15px; padding-right: 40px; color: grey;">
+                            <div style="font-size: 17px;">
                                 <tr>
                                     <td style="padding-right:40px;">Company Name</td>
                                     <td>
-                                        <input type="text" name="companyname" style="border-style: groove;">
+                                        <input type="text" name="companyname" style="border-style: groove; padding-left: 4px;" value="Alan Tire Company">
                                     </td>
                                 </tr>
                                 <br>
                                 <tr>
                                     <td style="padding-right:40px;">ZIP Code</td>
                                     <td>
-                                        <input type="text" name="zip" style="border-style: groove;">
+                                        <input type="text" name="zip" style="border-style: groove; padding-left: 4px;" value="OX5 1GB">
                                     </td>
                                 </tr>
                                 <br>
                                 <tr>
                                     <td style="padding-right:40px;">Address</td>
                                     <td>
-                                        <input type="text" name="address" style="border-style: groove;">
+                                        <input type="text" name="address" style="border-style: groove; padding-left: 4px;" value="281, Oxford Road">
                                     </td>
                                 </tr>
                                 <br>
                                 <tr>
                                     <td style="padding-right:40px;">Phone Number</td>
                                     <td>
-                                        <input type="text" name="mobile" style="border-style: groove;">
+                                        <input type="text" name="mobile" style="border-style: groove; padding-left: 4px;">
                                     </td>
                                 </tr>
-                                <br>
                             </div>
                         </table>
                     </div>
                     <div class="col-logo">
-                        <table style="padding-right: 2px">
+                        <table>
                             <tr>
                                 <td>
-                                        <img src="../assets/text.png"/>
+                                    <img src="../assets/text.png" />
                                 </td>
-                                <td><img src="assets/img/UploadLogo.PNG" style="padding-left:6px;" /></td>
+                                <td>
+                                    <img src="assets/img/UploadLogo.PNG" style="padding-left:6px;" />
+                                </td>
                             </tr>
                             <tr>
                                 <td></td>
                                 <td style="padding-left:115px; color: grey">or</td>
-                                </tr>
+                            </tr>
                             <tr>
                                 <td></td>
-                                <td style="padding-left:39px;">
-                                        <input class="btn btn-light" type="button" value="Choose File" style="padding-left:50px;padding-right:50px; color: grey;">
+                                <td style="padding-left:30px;">
+                                    <input class="btn btn-light" type="button" value="Choose File" style="padding-left:50px;padding-right:50px; color: grey;">
                                 </td>
-                            </tr>    
-                            
+                            </tr>
+
                         </table>
                     </div>
                 </div>
-                <br>
             </div>
         </div>
 
@@ -96,21 +98,21 @@
                                     <tr>
                                         <td style="padding-right:48px;">First Name</td>
                                         <td>
-                                            <input type="text" name="firstname" style="border-style: groove;">
+                                            <input type="text" name="firstname" style="border-style: groove;padding-left: 4px;">
                                         </td>
                                     </tr>
                                     <br>
                                     <tr>
                                         <td style="padding-right:48px;">Last Name</td>
                                         <td>
-                                            <input type="text" name="lastname" style="border-style: groove;">
+                                            <input type="text" name="lastname" style="border-style: groove;padding-left: 4px;">
                                         </td>
                                     </tr>
                                     <br>
                                     <tr>
                                         <td style="padding-right:48px;"> Email Address</td>
                                         <td>
-                                            <input type="text" name="email" style="border-style: groove;">
+                                            <input type="text" name="email" style="border-style: groove;padding-left: 4px;">
                                         </td>
                                     </tr>
 
@@ -120,15 +122,15 @@
                         <div class="row">
                             <div style="padding:20px;">
                                 <input class="regular-checkbox" type="checkbox" name="admin" value="admin">
-                                <output style="padding-left:20px;">Make an Administrator</output>
-                                <img src="assets/img/tooltip.PNG" style="padding-right:18px;" />
+                                <output style="padding-left:10px;">Make an Administrator</output>
+                                <img src="assets/img/tooltip.PNG" style="padding-right:25px;" />
                                 <input type="button" value="Add User" class="btn btn-light" style="padding-left: 40px; padding-right: 40px; color: grey">
                             </div>
                         </div>
                     </div>
-                    <br>
+
                     <div class="col">
-                        Users Added
+                        <br> Users Added
                         <div id="card2">
                             <div>
                                 <div class="row">
@@ -136,16 +138,16 @@
                                         <img src="assets/img/user.PNG" />
                                     </div>
                                     <div class="col-6">
-                                        <output style="font-size: 14px">Alan Walker(admin)</output>
+                                        <output>Alan Walker(admin)</output>
                                     </div>
                                     <div class="col-2">
                                         <a href="">
-                                            <u style="color: rgb(235, 235, 72);font-size: 14px">Edit</u>
+                                            <u style="color: rgb(235, 235, 72);padding-left: 40px;">Edit</u>
                                         </a>
                                     </div>
                                     <div class="col-1">
                                         <a href="">
-                                            <u style="color: rgb(235, 223, 72);font-size: 14px">Delete</u>
+                                            <u style="color: rgb(235, 223, 72);padding-left: 20px;">Delete</u>
                                         </a>
                                     </div>
                                 </div>
@@ -166,7 +168,7 @@
                 (Manage your customer interactions directly from the CRM)
                 <br>
                 <br>
-                <div style="color: grey">
+                <div style="color: black;">
                     Please choose one Email Service Provider and we will fill the server details for you.
                 </div>
                 <br>
@@ -177,7 +179,10 @@
                                 <div style="padding-left: 12px;">
                                     <tr>
                                         <td>
-                                            <img src="assets/img/gmailselected.PNG" height="75px" width="75px" />
+
+                                            <input type="image" id="gmail-button-before-select" onclick="setGmailDetails()" src="assets/img/gmail.png" alt="Submit" width="75px"
+                                                height="75px">
+
                                         </td>
                                         <td>
                                             <img src="assets/img/yahoo.PNG" height="75px" width="75px" />
@@ -195,20 +200,22 @@
                             </table>
                         </div>
                     </div>
-                    <br>
+
                     <div class="col-5">
-                        <div style="padding-left:20px;">
+                        <div style="padding-left:25px;">
                             Mail Server
-                            <img src="assets/img/tooltip.PNG" style="padding-right: 20px;" />
-                            <input type="text" name="mailserver" style="border-style: groove;background: rgb(241, 241, 241);">
+                            <img src="assets/img/tooltip.PNG" style="padding-right: 10px;" />
+                            <input type="text" id="gmail-server" name="mailserver" style="border-style: groove;background: rgb(241, 241, 241);color: #85857cfd;padding-left: 4px;"
+                                value="">
                             <br>
                             <br> Port
-                            <img src="assets/img/tooltip.PNG" style="padding-right: 70px;" />
-                            <input type="text" name="port" style="border-style: groove;background: rgb(241, 241, 241);">
+                            <img src="assets/img/tooltip.PNG" style="padding-right: 62px;" />
+                            <input type="text" id="gmail-port" name="port" style="border-style: groove;background: rgb(241, 241, 241);color: #85857cfd;padding-left: 4px;"
+                                value="">
                             <br>
                             <br> SSL or TLS
-                            <img src="assets/img/tooltip.PNG" style="padding-right: 27px;" />
-                            <select style="padding-right: 125px; height: 30px; color: #85857cfd;background: rgb(241, 241, 241);">
+                            <img src="assets/img/tooltip.PNG" style="padding-right: 8px;" />
+                            <select style="padding-right: 145px; height: 30px; color: #85857cfd;background: rgb(241, 241, 241);padding-left: 4px;">
                                 <option style="border-style: groove;" value="SSL">SSL</option>
                                 <option style="border-style: groove;" value="TLS">TLS</option>
                             </select>
@@ -219,22 +226,20 @@
                         <table>
                             <div style="font-size: 17px;">
                                 <tr>
-                                    <td>"From" Name</td>
-                                    <td>
-                                        <img src="assets/img/tooltip.PNG" />
+                                    <td>"From" Name
+                                        <img src="assets/img/tooltip.PNG" style="padding-right: 2px;" />
                                     </td>
                                     <td>
-                                        <input type="text" name="fromname" style="border-style: groove;">
+                                        <input type="text" name="fromname" style="border-style: groove;" value="Alan Tire Company">
                                     </td>
                                 </tr>
                                 <br>
                                 <tr>
-                                    <td>"From" Email</td>
-                                    <td>
+                                    <td>"From" Email
                                         <img src="assets/img/tooltip.PNG" />
                                     </td>
                                     <td>
-                                        <input type="text" name="fromemail" style="border-style: groove;">
+                                        <input type="text" name="fromemail" style="border-style: groove;" value="alantire@gmail.com">
                                     </td>
                                 </tr>
                                 <br>
@@ -242,7 +247,6 @@
                                     <td>Password
                                         <img src="assets/img/tooltip.PNG" />
                                     </td>
-                                    <td></td>
                                     <td>
                                         <input type="password" name="password" style="border-style: groove;">
                                     </td>
@@ -250,8 +254,9 @@
                                 <br>
                             </div>
                         </table>
-                        <input type="button" value="Integrate Email Account and Test Email" class="btn btn-light" style="padding-left: 25px; padding-right: 25px; color: #85857cfd;">
+                        <input type="button" value="Integrate Email Account and Test Email" class="btn btn-light" style="padding-left: 24px; padding-right: 24px; color: #85857cfd;">
                         <img src="assets/img/tooltip.PNG" />
+                        <br>
                     </div>
                 </div>
             </div>
@@ -268,7 +273,7 @@
 <div id="upload-users" style="overflow-y:scroll; height:620px;">
     <div id="First" class="outerBox1">
         <div class="logo">
-            <img src="../assets/yell.png" width="100" height="50" />
+            <img src="../assets/img/yell.png" />
         </div>
 
         <hr style="border-top: 3px solid #fffb00fd;">
@@ -287,7 +292,10 @@
             <div class="outerBox">
                 <div id="content">
                     <br>
-                    <p style="color: gray;">Import Customer, Contacts and Lead Data</p>
+                    <div id="text1">
+                        Import Customer, Contacts and Lead Data
+                    </div>
+                    <br>
                     <div class="row">
                         <div class="col">
                             <div id="content1" class="row"></div>
@@ -296,7 +304,7 @@
                                     <img src="../assets/one.png">
                                 </div>
                                 <div class="col">
-                                    <p id="firstRowWithPadding">Download the CSV format to fill up your customer data</p>
+                                    <p id="firstRowWithPadding" style="font-size: 17px;">Download the CSV format to fill up your customer data</p>
                                 </div>
                                 <div>
                                     <a href="../assets/SampleContacts.csv" download="SampleContacts.csv" title="Download CSV">
@@ -307,7 +315,7 @@
                             <br>
                             <div class="row">
                                 <div class="col-sm-2">
-                                    <img src="../assets/two.png">
+                                    <img src="../assets/two.png" />
                                 </div>
                                 <div class="col-sm-10">
                                     <div class="divBorder">
@@ -318,15 +326,20 @@
                                             <input type="file" id="file-input" class="upload" (change)="convertFile($event)" accept="csv">
                                         </div>
                                         <div>
-                                            <p id="smallFont">Drag and drop or click here to upload the filled-up file</p>
+                                            <p id="smallFont" style="font-size: 17px; text-align: center;">Drag and drop or click here to upload the filled-up file</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <br>
+                            <br>
+                            <div id="upload-success-panel" hidden>
+                                <input type="text" id="upload-success-text" value="Upload success !!!" />
+                            </div>
                         </div>
                         <div class="col-sm-2">
-                            <div style="padding-left: 35%">
-                                <img src="../assets/or.png">
+                            <div style="padding-left: 35%;">
+                                <img src="../assets/or.png" height="250px">
                             </div>
                         </div>
                         <div class="col">
@@ -348,7 +361,6 @@
                             </div>
                         </div>
                     </div>
-                    <br>
                 </div>
             </div>
         </div>
@@ -368,7 +380,7 @@
 
     <div id="Second" class="outerBox1">
         <div class="logo">
-            <img src="../assets/yell.png" width="100" height="50" />
+            <img src="../assets/img/yell.png" />
         </div>
 
         <hr style="border-top: 3px solid #fffb00fd;">
@@ -393,266 +405,66 @@
                 <div id="content">
                     <div [hidden]="!(tabClicked === 'Customer')">
                         <br>
-                        <p class="p1" id="p11">23 Customers imported.</p>
+                        <p class="p1" id="p11">5 Customers imported.</p>
                         <p class="p2">&nbsp;Please review and confirm your Customers</p>
                         <br>
-                        <table id="customers">
+                        <table class="table-tabs" border="1" style="width: 100%">
                             <tr>
-                                <th>Account</th>
-                                <th>Account Address</th>
-                                <th>Zip Code</th>
-                                <th>Account Telephone</th>
-                                <th>Account Email</th>
+                                <th class="table-tabs table-head">Account</th>
+                                <th class="table-tabs table-head">Account Address</th>
+                                <th class="table-tabs table-head">Zip Code</th>
+                                <th class="table-tabs table-head">Account Telephone</th>
+                                <th class="table-tabs table-head">Account Email</th>
                             </tr>
-                            <tr>
-                                <td>Anytime Air Support Inc</td>
-                                <td>Kidlington</td>
-                                <td>OX5 2FN</td>
-                                <td>(335) 264-8565</td>
-                                <td>anytimeair@example.com</td>
-
-                            </tr>
-                            <tr>
-                                <td>Anytime Air Support Inc</td>
-                                <td>Kidlington</td>
-                                <td>OX5 2FN</td>
-                                <td>(335) 264-8565</td>
-                                <td>anytimeair@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>Anytime Air Support Inc</td>
-                                <td>Kidlington</td>
-                                <td>OX5 2FN</td>
-                                <td>(335) 264-8565</td>
-                                <td>anytimeair@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
-                            </tr>
-                            <tr>
-                                <td>PAtoZ Co Ltd</td>
-                                <td>London</td>
-                                <td>LN1 3HJ</td>
-                                <td>(331) 264-8245</td>
-                                <td>a2z@example.com</td>
+                            <tr *ngFor="let d of contactList">
+                                <td class="table-tabs">{{ d.account }}</td>
+                                <td class="table-tabs">{{ d.accountAddress }}</td>
+                                <td class="table-tabs">{{ d.zipCode }}</td>
+                                <td class="table-tabs">{{ d.accountTelephone }}</td>
+                                <td class="table-tabs">{{ d.accountEmail }}</td>
                             </tr>
                         </table>
-                        <br>
                     </div>
                     <div [hidden]="!(tabClicked === 'Contacts')">
                         <br>
-                        <p class="p1" id="p11">300 Contacts imported.</p>
+                        <p class="p1" id="p11">10 Contacts imported.</p>
                         <p class="p2">&nbsp;Please review and confirm your Contacts</p>
                         <br>
-                        <table id="customers">
+                        <table class="table-tabs" border="1" style="width: 100%">
                             <tr>
-                                <th>Contact First Name</th>
-                                <th>Contact First Name</th>
-                                <th>Email Address</th>
-                                <th>Telephone</th>
-                                <th>Age</th>
-                                <th>Gender</th>
-                                <th>IT Developer</th>
+                                <th class="table-tabs table-head">Contact First Name</th>
+                                <th class="table-tabs table-head">Contact Last Name</th>
+                                <th class="table-tabs table-head">Email Address</th>
+                                <th class="table-tabs table-head">Telephone</th>
+                                <th class="table-tabs table-head">Age</th>
+                                <th class="table-tabs table-head">Gender</th>
+                                <th class="table-tabs table-head">Role</th>
                             </tr>
-                            <tr>
-                                <td>samplecontact1</td>
-                                <td>test1</td>
-                                <td>sample1@test1.com</td>
-                                <td>23423462343</td>
-                                <td>31</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
-
-                            </tr>
-                            <tr>
-                                <td>samplecontact2</td>
-                                <td>test2</td>
-                                <td>sample2@test2.com</td>
-                                <td>34523423423</td>
-                                <td>35</td>
-                                <td>Male</td>
-                                <td>Director Operations</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact3</td>
-                                <td>test3</td>
-                                <td>sample3@test3.com</td>
-                                <td>23423432447</td>
-                                <td>30</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact4</td>
-                                <td>test4</td>
-                                <td>sample4@test4.com</td>
-                                <td>23432432423</td>
-                                <td>27</td>
-                                <td>Male</td>
-                                <td>Mgr Operations</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact5</td>
-                                <td>test5</td>
-                                <td>sample5@test5.com</td>
-                                <td>34543536223</td>
-                                <td>38</td>
-                                <td>Male</td>
-                                <td>President</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact6</td>
-                                <td>test6</td>
-                                <td>sample6@test6.com</td>
-                                <td>34523443412</td>
-                                <td>29</td>
-                                <td>Male</td>
-                                <td>Director Operations</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact7</td>
-                                <td>test7</td>
-                                <td>sample7@test7.com</td>
-                                <td>34543134634</td>
-                                <td>35</td>
-                                <td>Male</td>
-                                <td>Director Operations</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact8</td>
-                                <td>test8</td>
-                                <td>sample8@test8.com</td>
-                                <td>45654523424</td>
-                                <td>31</td>
-                                <td>Male</td>
-                                <td>Director Operations</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact9</td>
-                                <td>test9</td>
-                                <td>sample9@test9.com</td>
-                                <td>45635234211</td>
-                                <td>34</td>
-                                <td>Male</td>
-                                <td>Mgr Operations</td>
-                            </tr>
-                            <tr>
-                                <td>samplecontact10</td>
-                                <td>test10</td>
-                                <td>sample10@test10.com</td>
-                                <td>78857566544</td>
-                                <td>36</td>
-                                <td>Male</td>
-                                <td>Mgr Operations</td>
+                            <tr *ngFor="let d of contactList">
+                                <td class="table-tabs">{{ d.contactFirstName }}</td>
+                                <td class="table-tabs">{{ d.contactLastName }}</td>
+                                <td class="table-tabs">{{ d.emailAddress }}</td>
+                                <td class="table-tabs">{{ d.telephone }}</td>
+                                <td class="table-tabs">{{ d.age }}</td>
+                                <td class="table-tabs">{{ d.gender }}</td>
+                                <td class="table-tabs">{{ d.title }}</td>
                             </tr>
                         </table>
-                        <br>
                     </div>
-                    <div [hidden]="!(tabClicked === 'LeadData')">
-                        <br>
-                        <p class="p1" id="p11">210 Leads imported.</p>
-                        <p class="p2">&nbsp;Please review and confirm your Lead Data</p>
-                        <br>
-                        <table id="customers">
-                            <tr>
-                                <th>Account Name</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email Address</th>
-                                <th>Telephone</th>
-                                <th>Age</th>
-                                <th>Gender</th>
-                                <th>Role</th>
-                            </tr>
-                            <tr>
-                                <td>Anytime Air Support Inc</td>
-                                <td>samplecontact1</td>
-                                <td>test1</td>
-                                <td>sample1@test1.com</td>
-                                <td>8798656746</td>
-                                <td>26</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
+                    <br>
 
-                            </tr>
+                    <div [hidden]="!(tabClicked === 'LeadData')">
+                        <p class="p1" id="p11">0 Leads imported.</p>
+                        <table class="table-tabs" border="1" style="width: 100%">
                             <tr>
-                                <td>Anytime Air Support Inc</td>
-                                <td>samplecontact2</td>
-                                <td>test2</td>
-                                <td>sample2@test2.com</td>
-                                <td>67854234232</td>
-                                <td>28</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
-                            </tr>
-                            <tr>
-                                <td>Anytime Air Support Inc</td>
-                                <td>samplecontact3</td>
-                                <td>test3</td>
-                                <td>sample3@test3.com</td>
-                                <td>56354355552</td>
-                                <td>38</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>samplecontact4</td>
-                                <td>test4</td>
-                                <td>sample4@test4.com</td>
-                                <td>45655424323</td>
-                                <td>25</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
-                            </tr>
-                            <tr>
-                                <td>AtoZ Co Ltd</td>
-                                <td>samplecontact5</td>
-                                <td>test5</td>
-                                <td>sample5@test5.com</td>
-                                <td>6345453242</td>
-                                <td>31</td>
-                                <td>Male</td>
-                                <td>Director Sales</td>
+                                <th class="table-tabs table-head">Account Name</th>
+                                <th class="table-tabs table-head">First Name</th>
+                                <th class="table-tabs table-head">Last Name</th>
+                                <th class="table-tabs table-head">Email Address</th>
+                                <th class="table-tabs table-head">Telephone</th>
+                                <th class="table-tabs table-head">Age</th>
+                                <th class="table-tabs table-head">Gender</th>
+                                <th class="table-tabs table-head">Role</th>
                             </tr>
                         </table>
                         <br>

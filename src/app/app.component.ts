@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+
 import { Http, Response, Headers, RequestOptions } from "@angular/http";
-import { BookData } from './BookData';
 import { AppComponentService } from "./app.component.service";
 import { Injectable } from "@angular/core";
 
@@ -15,14 +15,8 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class AppComponent {
   tabClicked: string;
-
-  constructor(
-    private appComponentService: AppComponentService, private http: Http) { }
-
-  public postProfile(book: BookData): void {
-    this.appComponentService.postProfile(book);
-  }
-
+  contactList: Observable<Array<any>>;
+  constructor(private http: Http) { }
   public convertFile(event: any) {
     let file: File = event.target.files[0];
     const reader = new FileReader();
@@ -51,7 +45,7 @@ export class AppComponent {
       }
       result.push(obj);
     }
-    this.postUsersData("{\"CrmUsers\" :" + JSON.stringify(result) + "}");
+    this.postUsersData("{\"ContactList\" :" + JSON.stringify(result) + "}");
   }
 
   private postUsersData(body: String) {
@@ -61,6 +55,13 @@ export class AppComponent {
     const options = new RequestOptions({ headers });
     return this.http.post(url, body, options).subscribe();
   }
+
+  getContacts(): Observable<any> {
+    let url = "http://localhost:8181/contacts";
+    return this.http.get(url).pipe(map((response: Response) => {
+        return response.json();
+    }));
+}
 
   myFirst() {
     var x = document.getElementById("First");
@@ -90,6 +91,9 @@ export class AppComponent {
   }
 
   enableUploadUsers() {
+
+    this.getContacts().subscribe((data: any) => console.log("contacts :",this.contactList = data));
+
     var updateProfile = document.getElementById("update-prodfile");
     updateProfile.style.display = "none";
 

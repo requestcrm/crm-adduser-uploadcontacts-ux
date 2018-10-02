@@ -441,13 +441,15 @@
                                 <th class="table-tabs table-head">Account Telephone</th>
                                 <th class="table-tabs table-head">Account Email</th>
                             </tr>
-                            <tr *ngFor="let d of contactList">
+                            <tbody *ngFor="let d of contactList">
+                            <tr *ngIf="d.accountEmail != null">
                                 <td class="table-tabs">{{ d.account }}</td>
                                 <td class="table-tabs">{{ d.accountAddress }}</td>
                                 <td class="table-tabs">{{ d.zipCode }}</td>
                                 <td class="table-tabs">{{ d.accountTelephone }}</td>
                                 <td class="table-tabs">{{ d.accountEmail }}</td>
                             </tr>
+                            </tbody>
                         </table>
                     </div>
                     <div [hidden]="!(tabClicked === 'Contacts')">
@@ -465,7 +467,8 @@
                                 <th class="table-tabs table-head">Gender</th>
                                 <th class="table-tabs table-head">Role</th>
                             </tr>
-                            <tr *ngFor="let d of contactList">
+                            <tbody *ngFor="let d of contactList">
+                            <tr *ngIf="d.emailAddress != null">
                                 <td class="table-tabs">{{ d.contactFirstName }}</td>
                                 <td class="table-tabs">{{ d.contactLastName }}</td>
                                 <td class="table-tabs">{{ d.emailAddress }}</td>
@@ -474,6 +477,7 @@
                                 <td class="table-tabs">{{ d.gender }}</td>
                                 <td class="table-tabs">{{ d.title }}</td>
                             </tr>
+                            </tbody>
                         </table>
                     </div>
                     <br>

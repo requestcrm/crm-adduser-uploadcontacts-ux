@@ -430,24 +430,24 @@
                 <div id="content">
                     <div [hidden]="!(tabClicked === 'Customer')">
                         <br>
-                        <p class="p1" id="p11">5 Customers imported.</p>
+                        <p class="p1" id="p11">4 Customers imported.</p>
                         <p class="p2">&nbsp;Please review and confirm your Customers</p>
                         <br>
                         <table class="table-tabs" border="1" style="width: 100%">
                             <tr>
-                                <th class="table-tabs table-head">Account</th>
-                                <th class="table-tabs table-head">Account Address</th>
-                                <th class="table-tabs table-head">Zip Code</th>
-                                <th class="table-tabs table-head">Account Telephone</th>
-                                <th class="table-tabs table-head">Account Email</th>
+                                <th class="table-tabs table-head">Customer Name</th>
+                                <th class="table-tabs table-head">Customer Address</th>
+                                <th class="table-tabs table-head">Customer Pin Code</th>
+                                <th class="table-tabs table-head">Customer Telephone</th>
+                                <th class="table-tabs table-head">Customer Email Address</th>
                             </tr>
                             <tbody *ngFor="let d of contactList">
-                            <tr *ngIf="d.accountEmail != null">
-                                <td class="table-tabs">{{ d.account }}</td>
-                                <td class="table-tabs">{{ d.accountAddress }}</td>
-                                <td class="table-tabs">{{ d.zipCode }}</td>
-                                <td class="table-tabs">{{ d.accountTelephone }}</td>
-                                <td class="table-tabs">{{ d.accountEmail }}</td>
+                            <tr *ngIf="d.customerEmailAddress != null">
+                                <td class="table-tabs">{{ d.customerName }}</td>
+                                <td class="table-tabs">{{ d.customerAddress }}</td>
+                                <td class="table-tabs">{{ d.customerPinCode }}</td>
+                                <td class="table-tabs">{{ d.customerTelephone }}</td>
+                                <td class="table-tabs">{{ d.customerEmailAddress }}</td>
                             </tr>
                             </tbody>
                         </table>
@@ -459,32 +459,34 @@
                         <br>
                         <table class="table-tabs" border="1" style="width: 100%">
                             <tr>
-                                <th class="table-tabs table-head">Contact First Name</th>
-                                <th class="table-tabs table-head">Contact Last Name</th>
+                                <th class="table-tabs table-head">First Name</th>
+                                <th class="table-tabs table-head">Last Name</th>
                                 <th class="table-tabs table-head">Email Address</th>
-                                <th class="table-tabs table-head">Telephone</th>
-                                <th class="table-tabs table-head">Age</th>
-                                <th class="table-tabs table-head">Gender</th>
-                                <th class="table-tabs table-head">Role</th>
+                                <th class="table-tabs table-head">Phone Number</th>
+                                <th class="table-tabs table-head">Car Size</th>
+                                <th class="table-tabs table-head">Car Year</th>
+                                <th class="table-tabs table-head">Car Make</th>
+                                <th class="table-tabs table-head">Car Model</th>
                             </tr>
                             <tbody *ngFor="let d of contactList">
                             <tr *ngIf="d.emailAddress != null">
-                                <td class="table-tabs">{{ d.contactFirstName }}</td>
-                                <td class="table-tabs">{{ d.contactLastName }}</td>
+                                <td class="table-tabs">{{ d.firstName }}</td>
+                                <td class="table-tabs">{{ d.lastName }}</td>
                                 <td class="table-tabs">{{ d.emailAddress }}</td>
-                                <td class="table-tabs">{{ d.telephone }}</td>
-                                <td class="table-tabs">{{ d.age }}</td>
-                                <td class="table-tabs">{{ d.gender }}</td>
-                                <td class="table-tabs">{{ d.title }}</td>
+                                <td class="table-tabs">{{ d.phoneNumber }}</td>
+                                <td class="table-tabs">{{ d.customField1 }}</td>
+                                <td class="table-tabs">{{ d.customField2 }}</td>
+                                <td class="table-tabs">{{ d.customField3 }}</td>
+                                <td class="table-tabs">{{ d.customField4 }}</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                     <br>
-
                     <div [hidden]="!(tabClicked === 'LeadData')">
                         <p class="p1" id="p11">0 Leads imported.</p>
-                        <table class="table-tabs" border="1" style="width: 100%">
+                        <br>
+                        <!-- <table class="table-tabs" border="1" style="width: 100%">
                             <tr>
                                 <th class="table-tabs table-head">Account Name</th>
                                 <th class="table-tabs table-head">First Name</th>
@@ -495,7 +497,7 @@
                                 <th class="table-tabs table-head">Gender</th>
                                 <th class="table-tabs table-head">Role</th>
                             </tr>
-                        </table>
+                        </table> -->
                         <br>
                     </div>
                 </div>

@@ -54,7 +54,7 @@ export class AppComponent {
 
   private postUsersData(body: String) {
     console.log("posting Users Details :" + body);
-    const url: string = "http://localhost:8181/insertRecord";
+    const url: string = "http://54.242.101.181:3001/insertRecord";
     const headers = new Headers({ "Content-Type": "application/json" });
     const options = new RequestOptions({ headers });
     return this.http.post(url, body, options).subscribe();
@@ -70,7 +70,7 @@ export class AppComponent {
   }
 
   getContacts(): Observable<any> {
-    let url = "http://localhost:8181/contacts";
+    let url = "http://54.242.101.181:3001/contacts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));

@@ -17,6 +17,7 @@ export class AppComponent {
   tabClicked: string;
   contactList: Observable<Array<any>>;
   disable: Boolean;
+  accountList: Observable<Array<any>>;
 
   constructor(private http: Http) { }
   public convertFile(event: any) {
@@ -108,7 +109,16 @@ export class AppComponent {
 
     (<HTMLInputElement> document.getElementById("success-excel-div")).style.display = "none";
 
+    this.getAccounts().subscribe((data: any) => console.log("accounts :",this.accountList = data));
+
   }
+
+  getAccounts(): Observable<any> {
+    let url = "http://localhost:8181/accounts";
+    return this.http.get(url).pipe(map((response: Response) => {
+        return response.json();
+    }));
+}
 
   enableUploadUsers() {
 
@@ -126,5 +136,12 @@ export class AppComponent {
     var uploadUsers = document.getElementById("upload-users");
     uploadUsers.style.display = "none";
   }
+
+  toUJ3() {
+    setTimeout(() => {
+      window.location.href='http://54.242.101.181:4203/';
+      this.toUJ3();
+    }, 2000);
+  } 
 
 }

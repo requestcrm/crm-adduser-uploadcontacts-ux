@@ -17,7 +17,7 @@
         <div style="padding: 0% 15%">
             <div id="details">
                 <div id="text1">
-                    Enter Company Profile Information
+                    Review Company Profile Information
                 </div>
                 <br>
                 <div class="row">
@@ -27,14 +27,14 @@
                                 <tr>
                                     <td style="padding-right:40px;">Company Name</td>
                                     <td>
-                                        <input type="text" name="companyname" style="border-style: groove; padding-left: 4px;" value="Alan Tire Company">
+                                        <input type="text" name="companyname" style="border-style: groove; padding-left: 4px;" value={{accountList[0].name}}>
                                     </td>
                                 </tr>
                                 <br>
                                 <tr>
                                     <td style="padding-right:40px;">ZIP Code</td>
                                     <td>
-                                        <input type="text" name="zip" style="border-style: groove; padding-left: 4px;" value="OX5 1GB">
+                                        <input type="text" name="zip" style="border-style: groove; padding-left: 4px;" value={{accountList[0].billingAddressPostcode}}>
                                     </td>
                                 </tr>
                                 <br>
@@ -259,7 +259,7 @@
                                 <br>
                             </div>
                         </table>
-                        <input type="button" value="Integrate Email Account and Test Email" class="btn btn-light" style="padding-left: 24px; padding-right: 24px; color: #85857cfd;">
+                        <input type="button" value="Integrate Email Account" class="btn btn-light" style="padding-left: 24px; padding-right: 24px; color: #85857cfd;">
                         <img src="assets/img/tooltip.PNG" />
                         <br>
                     </div>
@@ -276,6 +276,9 @@
 </div>
 
 <div id="upload-users" style="overflow-y:scroll; height:620px;">
+
+
+    
     <div id="First" class="outerBox1">
         <div class="logo">
             <img src="../assets/img/yell.png" />
@@ -337,7 +340,7 @@
                                     <div id="success-excel-div">
                                         <div class="row">
                                             <div style="flex: 0 0 25%; max-width: 19%;">
-                                                <img src="../assets/img/success.png"/>
+                                                <img src="../assets/img/success.png" />
                                             </div>
                                             <div class="col" style="background-color: rgb(207, 243, 223); padding-left: 29px; padding-right: 20px; padding-bottom: 5px;">
                                                 <div class="row">
@@ -346,11 +349,13 @@
                                                 <br>
                                                 <div class="row">
                                                     <p class="p1">File Uploaded:&nbsp;</p>
-                                                    <p class="p2" style="font-size: 12px; color: blue"><u>SampleContacts.CSV</u></p>
+                                                    <p class="p2" style="font-size: 12px; color: blue">
+                                                        <u>SampleContacts.CSV</u>
+                                                    </p>
                                                 </div>
                                                 <div class="row">
                                                     <button class="btn btn-light">Remove and Upload Again</button>
-                                                </div>    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -396,7 +401,7 @@
                     <button class="btn btn-light" (click)="enableUploadProfile()">&#x227A; Go Back</button>
                 </div>
                 <div class="col-8 text-right">
-                    <button id = "proceed1" class="btn btn-warning" (click)="myFirst()" disabled>Proceed to Step 3 – Review and Confirm Data</button>
+                    <button id="proceed1" class="btn btn-warning" (click)="myFirst()" disabled>Proceed to Step 3 – Review and Confirm Data</button>
                 </div>
             </div>
         </div>
@@ -430,7 +435,7 @@
                 <div id="content">
                     <div [hidden]="!(tabClicked === 'Customer')">
                         <br>
-                        <p class="p1" id="p11">4 Customers imported.</p>
+                        <p class="p1" id="p11">3 Customers imported.</p>
                         <p class="p2">&nbsp;Please review and confirm your Customers</p>
                         <br>
                         <table class="table-tabs" border="1" style="width: 100%">
@@ -441,15 +446,27 @@
                                 <th class="table-tabs table-head">Customer Telephone</th>
                                 <th class="table-tabs table-head">Customer Email Address</th>
                             </tr>
-                            <tbody *ngFor="let d of contactList">
-                            <tr *ngIf="d.customerEmailAddress != null">
-                                <td class="table-tabs">{{ d.customerName }}</td>
-                                <td class="table-tabs">{{ d.customerAddress }}</td>
-                                <td class="table-tabs">{{ d.customerPinCode }}</td>
-                                <td class="table-tabs">{{ d.customerTelephone }}</td>
-                                <td class="table-tabs">{{ d.customerEmailAddress }}</td>
-                            </tr>
-                            </tbody>
+                                <tr>
+                                    <td class="table-tabs">Family of Robby</td>
+                                    <td class="table-tabs">Kidlington</td>
+                                    <td class="table-tabs">OX5 2PD</td>
+                                    <td class="table-tabs">7799999999</td>
+                                    <td class="table-tabs">robvaldemo@gmail.com</td>
+                                </tr>
+                                <tr>
+                                        <td class="table-tabs">Family of Adam</td>
+                                        <td class="table-tabs">Oxford</td>
+                                        <td class="table-tabs">OX5 2PD</td>
+                                        <td class="table-tabs">7799943999</td>
+                                        <td class="table-tabs">adamsmithdemo@outlook.com</td>
+                                    </tr>
+                                    <tr>
+                                            <td class="table-tabs">Family of Charles</td>
+                                            <td class="table-tabs">yarton</td>
+                                            <td class="table-tabs">OX5 2UD</td>
+                                            <td class="table-tabs">7799129999</td>
+                                            <td class="table-tabs">charlesbrowndemo@outlook.com</td>
+                                        </tr>
                         </table>
                     </div>
                     <div [hidden]="!(tabClicked === 'Contacts')">
@@ -469,16 +486,16 @@
                                 <th class="table-tabs table-head">Car Model</th>
                             </tr>
                             <tbody *ngFor="let d of contactList">
-                            <tr *ngIf="d.emailAddress != null">
-                                <td class="table-tabs">{{ d.firstName }}</td>
-                                <td class="table-tabs">{{ d.lastName }}</td>
-                                <td class="table-tabs">{{ d.emailAddress }}</td>
-                                <td class="table-tabs">{{ d.phoneNumber }}</td>
-                                <td class="table-tabs">{{ d.customField1 }}</td>
-                                <td class="table-tabs">{{ d.customField2 }}</td>
-                                <td class="table-tabs">{{ d.customField3 }}</td>
-                                <td class="table-tabs">{{ d.customField4 }}</td>
-                            </tr>
+                                <tr *ngIf="d.emailAddress != null">
+                                    <td class="table-tabs">{{ d.firstName }}</td>
+                                    <td class="table-tabs">{{ d.lastName }}</td>
+                                    <td class="table-tabs">{{ d.emailAddress }}</td>
+                                    <td class="table-tabs">{{ d.phoneNumber }}</td>
+                                    <td class="table-tabs">{{ d.customField1 }}</td>
+                                    <td class="table-tabs">{{ d.customField2 }}</td>
+                                    <td class="table-tabs">{{ d.customField3 }}</td>
+                                    <td class="table-tabs">{{ d.customField4 }}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -510,7 +527,7 @@
                     <button class="btn btn-light" (click)="mySecond()">&#x227A; Go Back</button>
                 </div>
                 <div class="col-8 text-right">
-                    <button class="btn btn-warning">Proceed to Step 3 – Review and Confirm Data</button>
+                    <button class="btn btn-warning" (click)="toUJ3()">Proceed to Step 3 – Review and Confirm Data</button>
                 </div>
             </div>
         </div>

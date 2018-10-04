@@ -259,9 +259,10 @@
                                 <br>
                             </div>
                         </table>
-                        <input type="button" value="Integrate Email Account" class="btn btn-light" style="padding-left: 24px; padding-right: 24px; color: #85857cfd;">
-                        <img src="assets/img/tooltip.PNG" />
-                        <br>
+                        <div style="padding-left: 31%">
+                            <img src="assets/img/tooltip.PNG" />
+                            <input type="button" value="Integrate Email Account" class="btn btn-light" style="padding-left: 22px; padding-right: 24px; color: #85857cfd;">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -271,7 +272,7 @@
             <input type="button" value="Proceed to Step 2 - Import Data" class="btn btn-warning" style="padding-left: 25px; padding-right: 25px;"
                 (click)="enableUploadUsers()">
         </div>
-        <br>
+        <br><br><br>
     </div>
 </div>
 
@@ -427,9 +428,9 @@
         <hr>
         <div class="mainOuterBox">
             <div class="tabs">
-                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked == null || tabClicked === 'Customer'" (click)="tabClicked = 'Customer'">Customer</button>
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked == null || tabClicked === 'Customer'" (click)="tabClicked = 'Customer'">Customers</button>
                 <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'Contacts'" (click)="tabClicked = 'Contacts'">Contacts</button>
-                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'LeadData'" (click)="tabClicked = 'LeadData'">Lead</button>
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'LeadData'" (click)="tabClicked = 'LeadData'">Leads</button>
             </div>
             <div class="outerBox">
                 <div id="content">

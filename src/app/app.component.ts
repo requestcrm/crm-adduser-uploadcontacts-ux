@@ -154,7 +154,7 @@ export class AppComponent {
 
     await this.delay(10000);
 
-    window.location.href='http://54.242.101.181:4203';
+    window.location.href='http://ec2-54-242-101-181.compute-1.amazonaws.com:4203/';
 
   } 
 

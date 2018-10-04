@@ -114,7 +114,7 @@ export class AppComponent {
   }
 
   getAccounts(): Observable<any> {
-    let url = "http://localhost:8181/accounts";
+    let url = "http://54.242.101.181:3001/accounts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));

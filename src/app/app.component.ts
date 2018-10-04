@@ -119,7 +119,7 @@ export class AppComponent {
   }
 
   getAccounts(): Observable<any> {
-    let url = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/accounts";
+    let url = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/crm/accounts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));

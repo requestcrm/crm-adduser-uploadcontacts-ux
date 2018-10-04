@@ -57,7 +57,7 @@ export class AppComponent {
 
   private postUsersData(body: String) {
     console.log("posting Users Details :" + body);
-    const url: string = "http://54.242.101.181:3001/insertRecord";
+    const url: string = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/insertRecord";
     const headers = new Headers({ "Content-Type": "application/json" });
     const options = new RequestOptions({ headers });
     return this.http.post(url, body, options).subscribe();
@@ -73,7 +73,7 @@ export class AppComponent {
   }
 
   getContacts(): Observable<any> {
-    let url = "http://54.242.101.181:3001/contacts";
+    let url = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/contacts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));
@@ -102,6 +102,9 @@ export class AppComponent {
     var uploadUsers = document.getElementById("upload-users");
     uploadUsers.style.display = "none";
 
+    var updateProfile = document.getElementById("proceed-dashboard");
+    updateProfile.style.display = "none";
+
     var y = document.getElementById("Second");
     y.style.display = "none";
 
@@ -116,7 +119,7 @@ export class AppComponent {
   }
 
   getAccounts(): Observable<any> {
-    let url = "http://54.242.101.181:3001/accounts";
+    let url = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/accounts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));

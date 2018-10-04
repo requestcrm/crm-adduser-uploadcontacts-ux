@@ -527,7 +527,143 @@
                     <button class="btn btn-light" (click)="mySecond()">&#x227A; Go Back</button>
                 </div>
                 <div class="col-8 text-right">
-                    <button class="btn btn-warning" (click)="toUJ3()">Proceed to Step 3 – Review and Confirm Data</button>
+                    <button class="btn btn-warning" (click)="toStep4()">Proceed to Step 4 - View Dashboard</button>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<div id="proceed-dashboard" style="overflow-y:scroll; height:620px;">
+    <div id="First" class="outerBox1">
+        <div class="logo">
+            <img src="../assets/img/yell.png" />
+        </div>
+
+        <hr style="border-top: 3px solid #fffb00fd;">
+
+        <div style="text-align:center">
+            <h4 class="heading">Welcome to Yell CRM! Let us help you to get on boarded</h4>
+            <div id="smallfont">
+                You are just 1 step away from your first campaign
+            </div>
+            <div>
+                <img src="../assets/navbar2.png">
+            </div>
+        </div>
+        <hr>
+        <div class="mainOuterBox">
+            <div class="tabs">
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked == null || tabClicked === 'Customer'" (click)="tabClicked = 'Customer'">Customer</button>
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'Contacts'" (click)="tabClicked = 'Contacts'">Contacts</button>
+                <button class="btn btn-light-yellow" [class.btn-tab]="tabClicked === 'LeadData'" (click)="tabClicked = 'LeadData'">Lead</button>
+            </div>
+            <div class="outerBox">
+                <div id="content">
+                    <div [hidden]="!(tabClicked === 'Customer')">
+                        <br>
+                        <p class="p1" id="p11">3 Customers imported.</p>
+                        <p class="p2">&nbsp;Please review and confirm your Customers</p>
+                        <br>
+                        <table class="table-tabs" border="1" style="width: 100%">
+                            <tr>
+                                <th class="table-tabs table-head">Customer Name</th>
+                                <th class="table-tabs table-head">Customer Address</th>
+                                <th class="table-tabs table-head">Customer Pin Code</th>
+                                <th class="table-tabs table-head">Customer Telephone</th>
+                                <th class="table-tabs table-head">Customer Email Address</th>
+                            </tr>
+                                <tr>
+                                    <td class="table-tabs">Family of Robby</td>
+                                    <td class="table-tabs">Kidlington</td>
+                                    <td class="table-tabs">OX5 2PD</td>
+                                    <td class="table-tabs">7799999999</td>
+                                    <td class="table-tabs">robvaldemo@gmail.com</td>
+                                </tr>
+                                <tr>
+                                        <td class="table-tabs">Family of Adam</td>
+                                        <td class="table-tabs">Oxford</td>
+                                        <td class="table-tabs">OX5 2PD</td>
+                                        <td class="table-tabs">7799943999</td>
+                                        <td class="table-tabs">adamsmithdemo@outlook.com</td>
+                                    </tr>
+                                    <tr>
+                                            <td class="table-tabs">Family of Charles</td>
+                                            <td class="table-tabs">yarton</td>
+                                            <td class="table-tabs">OX5 2UD</td>
+                                            <td class="table-tabs">7799129999</td>
+                                            <td class="table-tabs">charlesbrowndemo@outlook.com</td>
+                                        </tr>
+                        </table>
+                    </div>
+                    <div [hidden]="!(tabClicked === 'Contacts')">
+                        <br>
+                        <p class="p1" id="p11">10 Contacts imported.</p>
+                        <p class="p2">&nbsp;Please review and confirm your Contacts</p>
+                        <br>
+                        <table class="table-tabs" border="1" style="width: 100%">
+                            <tr>
+                                <th class="table-tabs table-head">First Name</th>
+                                <th class="table-tabs table-head">Last Name</th>
+                                <th class="table-tabs table-head">Email Address</th>
+                                <th class="table-tabs table-head">Phone Number</th>
+                                <th class="table-tabs table-head">Vehicle Size</th>
+                                <th class="table-tabs table-head">Vehicle Year</th>
+                                <th class="table-tabs table-head">Vehicle Make</th>
+                                <th class="table-tabs table-head">Vehicle Model</th>
+                            </tr>
+                            <tbody *ngFor="let d of contactList">
+                                <tr *ngIf="d.emailAddress != null">
+                                    <td class="table-tabs">{{ d.firstName }}</td>
+                                    <td class="table-tabs">{{ d.lastName }}</td>
+                                    <td class="table-tabs">{{ d.emailAddress }}</td>
+                                    <td class="table-tabs">{{ d.phoneNumber }}</td>
+                                    <td class="table-tabs">{{ d.customField1 }}</td>
+                                    <td class="table-tabs">{{ d.customField2 }}</td>
+                                    <td class="table-tabs">{{ d.customField3 }}</td>
+                                    <td class="table-tabs">{{ d.customField4 }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                    <div [hidden]="!(tabClicked === 'LeadData')">
+                        <p class="p1" id="p11">0 Leads imported.</p>
+                        <br>
+                        <!-- <table class="table-tabs" border="1" style="width: 100%">
+                            <tr>
+                                <th class="table-tabs table-head">Account Name</th>
+                                <th class="table-tabs table-head">First Name</th>
+                                <th class="table-tabs table-head">Last Name</th>
+                                <th class="table-tabs table-head">Email Address</th>
+                                <th class="table-tabs table-head">Telephone</th>
+                                <th class="table-tabs table-head">Age</th>
+                                <th class="table-tabs table-head">Gender</th>
+                                <th class="table-tabs table-head">Role</th>
+                            </tr>
+                        </table> -->
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingImage" *ngIf="!isDashBoardGenerated" class="LockOn"
+                style="display: flex;justify-content: center; align-items: center;">
+                <div style="background-color:white;text-align:center; padding:15px;">
+                    <img height="120px" width="120px" src="../assets/img/loading1.gif"/> <br>
+                        Please wait as we are preparing Dashboard
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-3 text-center">
+                    <button class="btn btn-light" (click)="enableUploadUsers()">&#x227A; Go Back</button>
+                </div>
+                <div class="col-8 text-right">
+                    <button id="proceed1" class="btn btn-warning">Please Wait, Preparing Dashboard</button>
                 </div>
             </div>
         </div>

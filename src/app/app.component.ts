@@ -19,6 +19,8 @@ export class AppComponent {
   disable: Boolean;
   accountList: Observable<Array<any>>;
 
+  isDashBoardGenerated:boolean = true;
+
   constructor(private http: Http) { }
   public convertFile(event: any) {
     let file: File = event.target.files[0];
@@ -127,6 +129,9 @@ export class AppComponent {
 
     var uploadUsers = document.getElementById("upload-users");
     uploadUsers.style.display = "block";
+
+    var uploadUsers = document.getElementById("proceed-dashboard");
+    uploadUsers.style.display = "none";
   }
 
   enableUploadProfile() {
@@ -137,11 +142,24 @@ export class AppComponent {
     uploadUsers.style.display = "none";
   }
 
-  toUJ3() {
-    setTimeout(() => {
-      window.location.href='http://54.242.101.181:4203/';
-      this.toUJ3();
-    }, 2000);
+  async toStep4() {
+
+    var uploadUsers = document.getElementById("upload-users");
+    uploadUsers.style.display = "none";
+
+    var uploadUsers = document.getElementById("proceed-dashboard");
+    uploadUsers.style.display = "block";
+
+    this.isDashBoardGenerated = false;
+
+    await this.delay(10000);
+
+    window.location.href='http://54.242.101.181:4203';
+
   } 
+
+  async delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+  }
 
 }

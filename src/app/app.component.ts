@@ -57,7 +57,7 @@ export class AppComponent {
 
   private postUsersData(body: String) {
     console.log("posting Users Details :" + body);
-    const url: string = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/insertRecord";
+    const url: string = "http://ec2-52-70-15-104.compute-1.amazonaws.com:3001/insertRecord";
     const headers = new Headers({ "Content-Type": "application/json" });
     const options = new RequestOptions({ headers });
     return this.http.post(url, body, options).subscribe();
@@ -73,7 +73,7 @@ export class AppComponent {
   }
 
   getContacts(): Observable<any> {
-    let url = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/contacts";
+    let url = "http://ec2-52-70-15-104.compute-1.amazonaws.com:3001/contacts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));
@@ -119,7 +119,7 @@ export class AppComponent {
   }
 
   getAccounts(): Observable<any> {
-    let url = "http://ec2-54-242-101-181.compute-1.amazonaws.com:3001/crm/accounts";
+    let url = "http://ec2-52-70-15-104.compute-1.amazonaws.com:3001/crm/accounts";
     return this.http.get(url).pipe(map((response: Response) => {
         return response.json();
     }));
@@ -157,7 +157,7 @@ export class AppComponent {
 
     await this.delay(10000);
 
-    window.location.href='http://ec2-54-242-101-181.compute-1.amazonaws.com:4203/';
+    window.location.href='http://ec2-52-70-15-104.compute-1.amazonaws.com:4203/';
 
   } 
 

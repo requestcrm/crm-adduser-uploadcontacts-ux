@@ -26,7 +26,31 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Docker stuff
+##use below to build,push,run docker container for this project
+
+#Build :
+
+sudo docker build -t crm-uploadusers-ux .
+
+#Push the image to docker :
+
+sudo docker login -u `dockerhub-username` -p `dockerhub-password`
+
+sudo docker tag crm-uploadusers-ux capstonetravelagency/crm-uploadusers-ux
+
+sudo docker push capstonetravelagency/crm-uploadusers-ux
+
+#Pull
+
+sudo docker pull capstonetravelagency/crm-uploadusers-ux
+
+# Run the container
+
+sudo docker run -it -p 4202:4202 capstonetravelagency/crm-uploadusers-ux
+
+
+
+## generic Docker stuff
 
 
 sudo docker build -t crm-uploadusers-ux .
